@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/App'
-import './styles/style.sass'
+// import App from './components/App'
+import Login from './container/Login'
+// import './styles/style.sass'
+
 const root = ReactDOM.createRoot(document.getElementById('app'));
-
-
-root.render(<App />)
+root.render(<Login />)

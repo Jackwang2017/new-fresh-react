@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: path.resolve(__dirname, '/src/index.js'),
   },
   output: {
     filename: '[name].[hash].js',
@@ -15,17 +15,17 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: path.resolve(__dirname, "node_modules"),
-        use: [
-          {
-            loader: 'babel-loader'
-          }
-        ]
+        use: ['babel-loader']
       },
       {
         test: /\.s(a|c)ss$/,
         use: [
           'style-loader', 'css-loader', 'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/,
+        use: ['file-loader']
       }
     ]
   },
