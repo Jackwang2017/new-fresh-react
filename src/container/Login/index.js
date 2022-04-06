@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Input, Checkbox, Button } from 'antd';
+// import { Form } from '@ant-design/compatible';
+// import '@ant-design/compatible/assets/index.css';
+import { Input, Checkbox, Button, Form } from 'antd';
 
 class Login extends Component {
   constructor() {
