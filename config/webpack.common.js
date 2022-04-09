@@ -18,16 +18,29 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.s(a|c)ss$/,
+        test: /\.less$/,
         use: [
-          'style-loader', 'css-loader', 'less-loader'
+          'style-loader', 'css-loader',
+          {
+            loader: "less-loader",
+            options: {
+              implementation: require("less"),
+              sourceMap: true,
+              javascriptEnabled: true,
+            }
+          }
         ]
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/,
         use: ['file-loader']
       }
-    ]
+    ],
+    parser: {
+      javascript: {
+        commonjsMagicComments: true,
+      }
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
