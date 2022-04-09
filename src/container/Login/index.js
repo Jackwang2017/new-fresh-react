@@ -27,7 +27,7 @@ class Login extends Component {
           autoComplete="off"
           className="form-login"
         >
-          <div className="login-title">登录333账户</div>
+          <div className="login-title">登录3账户</div>
           <Form.Item
             label="用户名"
             name="username"

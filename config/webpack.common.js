@@ -1,7 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const isENV = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: {
     main: path.resolve(__dirname, '/src/index.js'),
@@ -14,8 +14,13 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: path.resolve(__dirname, "node_modules"),
-        use: ['babel-loader']
+        exclude: /node_modules/,
+        use: [{
+          loader: require.resolve('babel-loader'),
+          options: {
+            plugins: isENV ? [require.resolve('react-refresh/babel')] : [],
+          }
+        }]
       },
       {
         test: /\.less$/,
