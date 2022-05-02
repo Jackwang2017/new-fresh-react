@@ -4,5 +4,5 @@ import ReactDOM from 'react-dom/client'
 import Login from './container/Login/index'
 // import './styles/style.sass'
 
-const root = ReactDOM.createRoot(document.getElementById('app'));
+const root = ReactDOM.createRoot(document.getElementById('app') as HTMLElement);
 root.render(<Login />)
