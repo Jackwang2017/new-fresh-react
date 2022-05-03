@@ -6,9 +6,11 @@ const Login: FC = () => {
   const onFinish = (values: any) => {
     console.log('Success:', values)
   }
+
   const onFinishFailed = (error: any) => {
     console.log('Failed:', error)
   }
+
   return (
     <Form
       name="basic"
