@@ -3,7 +3,6 @@
     "target": "ES2015",
     "lib": [
       "dom",
-      "dom.iterable",
       "esnext"
     ],
     "allowJs": true,
@@ -18,9 +17,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    // "jsx": "react-jsx",
+    "jsx": "react",
+    "baseUrl": ".",
     "paths": {
-      "*": ["./node_modules/@types"]
+      "*": ["node_modules/@types/*"]
     },
   },
   "include": [

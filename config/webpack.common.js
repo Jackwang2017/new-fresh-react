@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isENV = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, '/src/index.ts'),
+    main: path.resolve(__dirname, '/src/index.tsx'),
   },
   output: {
     filename: '[name].[hash].js',
